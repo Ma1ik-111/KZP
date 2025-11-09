@@ -14,7 +14,7 @@ public class AudioPlayerApp {
             player.addTrack(new Track("Neon Samurai", "JJ SHOP", 210));
             player.addTrack(new Track("Midnight Drive", "SynthFox", 185));
             player.addTrack(new Track("Cyber Mirage", "OrionDeMirage", 240));
-            out.println("🎵 Added 3 demo tracks to playlist.\n");
+            out.println("Added 3 demo tracks to playlist.\n");
 
             Scanner sc = new Scanner(System.in);
             int choice;
@@ -50,38 +50,38 @@ public class AudioPlayerApp {
                         out.print("Enter duration (sec): ");
                         int dur = sc.nextInt();
                         player.addTrack(new Track(title, artist, dur));
-                        out.println("✅ Track added.");
+                        out.println(" Track added.");
                     }
                     case 2 -> {
                         player.play();
-                        out.println("▶️  Playing current track...");
+                        out.println(" Playing current track...");
                         out.println(player.getStatus());
                     }
                     case 3 -> {
                         player.pause();
-                        out.println("⏸️  Paused.");
+                        out.println("  Paused.");
                         out.println(player.getStatus());
                     }
                     case 4 -> {
                         player.stop();
-                        out.println("⏹️  Stopped.");
+                        out.println("  Stopped.");
                         out.println(player.getStatus());
                     }
                     case 5 -> {
                         player.next();
-                        out.println("⏭️  Next track...");
+                        out.println("  Next track...");
                         out.println(player.getStatus());
                     }
                     case 6 -> {
                         player.prev();
-                        out.println("⏮️  Previous track...");
+                        out.println("  Previous track...");
                         out.println(player.getStatus());
                     }
                     case 7 -> {
                         out.print("Volume (0-100): ");
                         int v = sc.nextInt();
                         player.setVolume(v);
-                        out.println("🔊 Volume set to " + v + "%");
+                        out.println(" Volume set to " + v + "%");
                         out.println(player.getStatus());
                     }
                     case 8 -> {
@@ -89,15 +89,15 @@ public class AudioPlayerApp {
                         int m = sc.nextInt();
                         if (m == 1) {
                             player.mute();
-                            out.println("🔇 Muted");
+                            out.println(" Muted");
                         } else {
                             player.unmute();
-                            out.println("🔊 Unmuted");
+                            out.println(" Unmuted");
                         }
                         out.println(player.getStatus());
                     }
                     case 9 -> out.println(player.getStatus());
-                    case 0 -> out.println("👋 Exiting player...");
+                    case 0 -> out.println(" Exiting player...");
                     default -> out.println("Unknown command.");
                 }
             } while (choice != 0);
