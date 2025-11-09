@@ -1,0 +1,13 @@
+2025-11-09T11:06:17.219761400 :: AudioPlayer created
+2025-11-09T11:06:17.240761 :: addTrack(Track{Neon Samurai - JJ SHOP, 210s}) size=1
+2025-11-09T11:06:17.241760800 :: addTrack(Track{Midnight Drive - SynthFox, 185s}) size=2
+2025-11-09T11:06:17.241760800 :: addTrack(Track{Cyber Mirage - OrionDeMirage, 240s}) size=3
+2025-11-09T11:06:19.334647600 :: play() -> Neon Samurai
+2025-11-09T11:06:19.343567900 :: getStatus() -> Status{state=PLAYING, volume=50, muted=false, track=Neon Samurai}
+2025-11-09T11:06:27.049827600 :: pause()
+2025-11-09T11:06:27.050840200 :: getStatus() -> Status{state=PAUSED, volume=50, muted=false, track=Neon Samurai}
+2025-11-09T11:06:35.853438600 :: setVolume(80)
+2025-11-09T11:06:35.853438600 :: getStatus() -> Status{state=PAUSED, volume=80, muted=false, track=Neon Samurai}
+2025-11-09T11:06:47.295599400 :: next() -> Midnight Drive
+2025-11-09T11:06:47.296597500 :: getStatus() -> Status{state=PLAYING, volume=80, muted=false, track=Midnight Drive}
+2025-11-09T11:35:56.101197300 :: dispose()
