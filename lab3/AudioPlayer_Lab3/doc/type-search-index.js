@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"KI305.Malynovskyi.Lab3","l":"AudioPlayer"},{"p":"KI305.Malynovskyi.Lab3","l":"AudioPlayerApp"},{"p":"KI305.Malynovskyi.Lab3","l":"Dictaphone"},{"p":"KI305.Malynovskyi.Lab3","l":"Player"},{"p":"KI305.Malynovskyi.Lab3","l":"Recordable"}];updateSearchResults();
