@@ -14,14 +14,21 @@ public class AudioPlayerApp {
             System.out.println("2 - Dictaphone (Lab3)");
             System.out.println("0 - Exit");
             System.out.print("Choice: ");
+            while (!sc.hasNextInt()) {
+                System.out.print("Enter number: ");
+                sc.next();
+            }
             choice = sc.nextInt();
 
             switch (choice) {
                 case 1 -> runAudioPlayer(sc);
-                case 2 -> runDictaphone(sc);
+                case 2 -> runDictaphone(sc);   
             }
 
         } while (choice != 0);
+
+        sc.close();
+        System.out.println("Bye!");
     }
 
     private static void runAudioPlayer(Scanner sc) {
@@ -34,6 +41,11 @@ public class AudioPlayerApp {
             System.out.println("2 - Stop");
             System.out.println("3 - Volume");
             System.out.println("0 - Back");
+            System.out.print("Choice: ");
+            while (!sc.hasNextInt()) {
+                System.out.print("Enter number: ");
+                sc.next();
+            }
             c = sc.nextInt();
 
             switch (c) {
@@ -41,16 +53,22 @@ public class AudioPlayerApp {
                 case 2 -> player.stop();
                 case 3 -> {
                     System.out.print("Volume: ");
-                    player.setVolume(sc.nextInt());
+                    int v = sc.nextInt();
+                    player.setVolume(v);
                 }
             }
         } while (c != 0);
+
+        player.close(); 
     }
 
+ 
     private static void runDictaphone(Scanner sc) {
-        Dictaphone d = new Dictaphone();
-        int c;
+        
+        AudioPlayer device = new Dictaphone();   
+        Recordable rec = (Recordable) device;    
 
+        int c;
         do {
             System.out.println("\n=== DICTAPHONE ===");
             System.out.println("1 - Start recording");
@@ -58,14 +76,22 @@ public class AudioPlayerApp {
             System.out.println("3 - Playback");
             System.out.println("4 - Info");
             System.out.println("0 - Back");
+            System.out.print("Choice: ");
+            while (!sc.hasNextInt()) {
+                System.out.print("Enter number: ");
+                sc.next();
+            }
             c = sc.nextInt();
 
             switch (c) {
-                case 1 -> d.startRecording();
-                case 2 -> d.stopRecording();
-                case 3 -> d.play();
-                case 4 -> System.out.println("Recorded: " + d.getRecordedSeconds() + " sec");
+                case 1 -> rec.startRecording();
+                case 2 -> rec.stopRecording();
+                case 3 -> device.play(); 
+                case 4 -> System.out.println("Recorded: " + rec.getRecordedSeconds() + " sec");
             }
         } while (c != 0);
+
+        device.stop();
+        device.close(); 
     }
 }
