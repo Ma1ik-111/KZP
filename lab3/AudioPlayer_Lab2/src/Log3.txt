@@ -1,8 +1,0 @@
-2025-11-09T14:09:41.476255200 :: AudioPlayer created
-2025-11-09T14:09:41.485260 :: Dictaphone created
-2025-11-09T14:09:41.487256800 :: Volume set to 70
-2025-11-09T14:09:41.488258400 :: Recording started
-2025-11-09T14:09:42.493863900 :: Recording stopped. Duration: 119s
-2025-11-09T14:09:42.494852500 :: Playback started
-2025-11-09T14:09:42.495870100 :: Playback stopped
-2025-11-09T14:09:42.495870100 :: Disposed
