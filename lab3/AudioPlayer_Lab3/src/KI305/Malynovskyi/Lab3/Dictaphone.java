@@ -7,31 +7,36 @@ public class Dictaphone extends AudioPlayer implements Recordable {
 
     @Override
     public void play() {
+        writeLog("Dictaphone: play()");
+
         if (recordedTime == 0) {
             System.out.println("No recordings!");
             return;
         }
-        System.out.println("▶️ Playing dictaphone recording... (" + recordedTime + "s)");
+        System.out.println("Playing dictaphone recording... (" + recordedTime + "s)");
     }
 
     @Override
     public void stop() {
         isPlaying = false;
-        System.out.println("⏹️ Playback stopped.");
+        writeLog("Dictaphone: stop()");
+        System.out.println(" Playback stopped.");
     }
 
     @Override
     public void startRecording() {
+        writeLog("Dictaphone: startRecording()");
         recording = true;
         recordedTime = 0;
-        System.out.println("🔴 Recording started...");
+        System.out.println(" Recording started...");
     }
 
     @Override
     public void stopRecording() {
+        writeLog("Dictaphone: stopRecording()");
         recording = false;
         recordedTime = (int)(Math.random() * 180);
-        System.out.println("💾 Recording saved (" + recordedTime + " sec).");
+        System.out.println(" Recording saved (" + recordedTime + " sec).");
     }
 
     @Override

@@ -5,12 +5,14 @@ public class Player extends AudioPlayer {
     @Override
     public void play() {
         isPlaying = true;
-        System.out.println("▶️ Playing audio...");
+        writeLog("Player: play()");
+        System.out.println("Playing audio...");
     }
 
     @Override
     public void stop() {
         isPlaying = false;
-        System.out.println("⏹️ Stopped.");
+        writeLog("Player: stop()");
+        System.out.println("Stopped.");
     }
 }
